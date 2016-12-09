@@ -50,7 +50,7 @@ public class Server {
 			}
 			setName();
 			sendMsg("welcome");
-			sendMsgToOthers("欢迎"+this.name+"进入聊天�?");
+			sendMsgToOthers("欢迎"+this.name+"进入聊天室");
 			clientList.add(this);
 		}
 		/**
@@ -97,7 +97,7 @@ public class Server {
 		public void sendMsgToOthers(String msg){
 			for(ClientReceive cr : clientList){
 				if(cr != this)
-					cr.sendMsg(this.name + "�?" + msg);
+					cr.sendMsg(this.name + "：" + msg);
 			}
 		}
 		
